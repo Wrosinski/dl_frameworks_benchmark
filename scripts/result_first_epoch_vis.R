@@ -8,7 +8,7 @@ acc_plot_wf <- function(df, save=FALSE, title='', plot_name='') {
     geom_col(fill='navy') +
     geom_label_repel(aes(label=epoch_time)) +
     scale_color_brewer(palette='Set2') +
-    labs(x='Model name', y='Epoch time', title=title) +
+    labs(x='Model name', y='Epoch time [s]', title=title) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle=90, hjust=1, size=11))
   g_full
@@ -25,7 +25,7 @@ acc_plot_facet <- function(df, save=FALSE, title='', plot_name='') {
     geom_col(aes(fill=model_name)) +
     geom_label_repel(aes(label=epoch_time)) +
     scale_color_brewer(palette='Set2') +
-    labs(x='Model name', y='Epoch time', title=title) +
+    labs(x='Model name', y='Epoch time [s]', title=title) +
     theme_minimal() +
     facet_grid(. ~ framework, drop=TRUE) +
     theme(axis.text.x = element_text(angle=90, hjust=1, size=11))
@@ -36,8 +36,8 @@ acc_plot_facet <- function(df, save=FALSE, title='', plot_name='') {
   }
 }
 
-# df <- read.csv('df_first_epoch.csv')
-df <- read.csv('df_non_first.csv')
+df <- read.csv('df_first_epoch.csv')
+# df <- read.csv('df_non_first.csv')
 
 
 df$epoch_time <- round(df$epoch_time, 0)
@@ -50,4 +50,4 @@ df_keras <- df[which(df$framework == 'keras'), ]
 df_torch <- df[which(df$framework == 'pytorch'), ]
 
 # Plot all:
-acc_plot_facet(df, TRUE, 'Epoch times without first epoch', 'non_first_epoch_times')  # OK
+acc_plot_facet(df, TRUE, 'First epoch times', 'first_epoch_times')  # OK

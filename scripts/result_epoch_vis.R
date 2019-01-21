@@ -8,7 +8,7 @@ acc_plot_wf <- function(df, save=FALSE, title='', plot_name='') {
     geom_col(fill='navy') +
     geom_label_repel(aes(label=epoch_time)) +
     scale_color_brewer(palette='Set2') +
-    labs(x='Model name', y='Epoch time', title=title) +
+    labs(x='Model name', y='Epoch time [s]', title=title) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle=90, hjust=1, size=11))
   g_full
@@ -25,7 +25,7 @@ acc_plot_facet <- function(df, save=FALSE, title='', plot_name='') {
     geom_col(aes(fill=model_name)) +
     geom_label_repel(aes(label=epoch_time)) +
     scale_color_brewer(palette='Set2') +
-    labs(x='Model name', y='Epoch time', title=title) +
+    labs(x='Model name', y='Epoch time [s]', title=title) +
     theme_minimal() +
     facet_grid(. ~ framework) +
     theme(axis.text.x = element_text(angle=90, hjust=1, size=11))

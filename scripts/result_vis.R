@@ -7,7 +7,7 @@ acc_plot_wf <- function(df, save=FALSE, title='', plot_name='') {
     geom_point(aes(color=framework, shape=batch_size), size=4) +
     # geom_label_repel(aes(label=batch_size)) +
     scale_color_brewer(palette='Set1') +
-    labs(x='Model name', y='Epoch time', title=title) +
+    labs(x='Model name', y='Epoch time [s]', title=title) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle=90, hjust=1, size=11))
   g_full
