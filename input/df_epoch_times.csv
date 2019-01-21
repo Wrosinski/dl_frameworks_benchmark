@@ -1,0 +1,13 @@
+model_name,framework,batch_size,epoch_time
+densenet121,keras,12,229.63900513648986
+densenet121,pytorch,12,178.47471690177917
+densenet169,keras,8,332.472145430247
+densenet169,pytorch,8,246.30646704037983
+inceptionresnetv2,keras,12,395.09669507344563
+inceptionresnetv2,pytorch,12,343.291899172465
+inceptionv3,keras,32,165.75870873133343
+inceptionv3,pytorch,32,119.38611806233725
+nasnet,pytorch,4,1209.1156068960825
+pnasnet,pytorch,4,1139.9160527706147
+resnet50,keras,16,211.33288197517396
+resnet50,pytorch,16,164.29784469604493

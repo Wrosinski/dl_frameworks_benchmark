@@ -1,0 +1,13 @@
+epoch,model_name,framework,batch_size,epoch_time
+0,densenet121,keras,12,251.18840940793356
+0,densenet121,pytorch,12,178.31120705604553
+0,densenet169,keras,8,400.03615204493207
+0,densenet169,pytorch,8,246.62806073824564
+0,inceptionresnetv2,keras,12,432.1283531983693
+0,inceptionresnetv2,pytorch,12,341.85162019729614
+0,inceptionv3,keras,32,280.0463038285573
+0,inceptionv3,pytorch,32,119.34390250841777
+0,nasnet,pytorch,4,1208.9091771443684
+0,pnasnet,pytorch,4,1140.6818352540333
+0,resnet50,keras,16,221.61211395263672
+0,resnet50,pytorch,16,164.2827010154724
